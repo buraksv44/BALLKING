@@ -1,7 +1,0 @@
-.apply-revert {
-    flex-direction: row;
-}
-
-.grow-button {
-    flex-grow: 1;
-}
