@@ -1,0 +1,31 @@
+{
+  "name": "com.unity.microsoft.gdk.tools",
+  "version": "1.7.0",
+  "displayName": "Microsoft GDK Tools",
+  "description": "This package adds GDK workflow support when used in combination with com.unity.microsoft.gdk",
+  "keywords": [
+    "microsoft",
+    "gdk",
+    "tools",
+    "workflow"
+  ],
+  "unity": "6000.0",
+  "license": "Unity Companion Package License v1.0",
+  "dependencies": {
+    "com.unity.microsoft.gdk.discovery": "1.3.0"
+  },
+  "hideInEditor": false,
+  "_upm": {
+    "changelog": "### Added\n- Added automatic Submission Validator update via the MakePkg `/updatesubval` flag (requires\n  GDK October 2025 or later). When packaging, MakePkg checks for a newer\n  `SubmissionValidator.dll` and downloads it into the build output directory for validation.\n  The GDK installation is not modified. If the machine is offline, the existing DLL from the\n  GDK installation is used as a fallback.\n### Fixed\n- Fix unused field warning when project is opened on none Windows platform.\n- Fix `kBatFileTemplate` where extra MakePkg arguments (e.g. `/contentid`) were incorrectly\n  placed between `/f` and the layout XML path, breaking argument parsing in the CreateSolution\n  build path.\n### Changed\n- `Create Microsoft Store Package` and `Sideloadable Package`options in `Project Settings -> Microsoft GDK`, are disabled if the Build and Run deployment method is set to Xbox PC Toolbox\n- Minimum supported Unity editor version changed to 6000.0"
+  },
+  "upmCi": {
+    "footprint": "5fc24fb64d71fafbc55e3373d089cbd60200df2b"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.microsoft.gdk.tools@1.7/manual/index.html",
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/com.unity.microsoft.gdk.git",
+    "type": "git",
+    "revision": "2f393b26b6e26d5fc00d7fd3ad983ee0b577394b"
+  },
+  "_fingerprint": "d61763b7f2283e1a643cd808656735c0c04b695b"
+}

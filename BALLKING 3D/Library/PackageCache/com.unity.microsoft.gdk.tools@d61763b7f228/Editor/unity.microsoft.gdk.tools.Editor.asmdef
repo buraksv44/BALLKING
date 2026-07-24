@@ -1,0 +1,19 @@
+{
+    "name": "Unity.Microsoft.GDK.Tools.Editor",
+    "rootNamespace": "Unity.Microsoft.GDK.Tools.Editor",
+    "references": [
+        "Unity.Microsoft.GDK.Tools",
+        "Unity.Microsoft.GDK.Discovery"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

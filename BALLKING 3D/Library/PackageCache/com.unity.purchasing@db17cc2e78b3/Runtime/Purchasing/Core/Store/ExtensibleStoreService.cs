@@ -1,0 +1,93 @@
+#nullable enable
+
+using System;
+using System.Threading.Tasks;
+
+namespace UnityEngine.Purchasing
+{
+    /// <summary>
+    /// An abstract store service to extend an existing Store Service which will handle all of the basic IStoreService implementations
+    /// The main purpose of this is to allow a custom store to add implementations of extended features to this service.
+    /// The calls to IStoreService are kept virtual so that the derivations of the base store implementing them can be added to or overridden.
+    /// </summary>
+    public abstract class ExtensibleStoreService : IStoreService
+    {
+        IStoreService m_BaseInternalStoreService;
+
+        /// <summary>
+        /// Constructor to be used by derived classes
+        /// </summary>
+        /// <param name="baseStoreService"> The base service implementation which implements IStoreService </param>
+        protected ExtensibleStoreService(IStoreService baseStoreService)
+        {
+            m_BaseInternalStoreService = baseStoreService;
+        }
+
+        /// <summary>
+        /// Apple Specific Store Extensions
+        /// </summary>
+        public virtual IAppleStoreExtendedService? Apple => m_BaseInternalStoreService.Apple;
+
+        /// <summary>
+        /// Google Specific Store Extensions
+        /// </summary>
+        public virtual IGooglePlayStoreExtendedService? Google => m_BaseInternalStoreService.Google;
+
+        public IPaymentProvidersExtendedService? PaymentProviders => m_BaseInternalStoreService.PaymentProviders;
+
+        /// <summary>
+        /// Initiates a connection to the store.
+        /// </summary>
+        /// <returns>Return a handle to the initialization operation.</returns>
+        public virtual Task Connect()
+        {
+            return m_BaseInternalStoreService.Connect();
+        }
+
+        /// <summary>
+        /// Get the connection state to a given store.
+        /// </summary>
+        /// <returns>The state of the connection to the store.</returns>
+        public virtual ConnectionState GetConnectionState()
+        {
+            return m_BaseInternalStoreService.GetConnectionState();
+        }
+
+        /// <summary>
+        /// Set a custom reconnection policy when the store disconnects.
+        /// </summary>
+        /// <param name="retryPolicy">The policy that will be used to determine if reconnection should be attempted.</param>
+        public virtual void SetStoreReconnectionRetryPolicyOnDisconnection(IRetryPolicy? retryPolicy)
+        {
+            m_BaseInternalStoreService.SetStoreReconnectionRetryPolicyOnDisconnection(retryPolicy);
+        }
+
+        /// <summary>
+        /// Callback for when the store disconnects.
+        /// </summary>
+        public event Action<StoreConnectionFailureDescription>? OnStoreDisconnected
+        {
+            add => m_BaseInternalStoreService.OnStoreDisconnected += value;
+            remove => m_BaseInternalStoreService.OnStoreDisconnected -= value;
+        }
+
+        /// <summary>
+        /// Callback for when the store successfully connects.
+        /// </summary>
+        public virtual event Action? OnStoreConnected
+        {
+            add => m_BaseInternalStoreService.OnStoreConnected += value;
+            remove => m_BaseInternalStoreService.OnStoreConnected -= value;
+        }
+
+        /// <summary>
+        /// Callback for when the authenticated end-user account changes; product and purchase
+        /// caches have been cleared by the time this fires.
+        /// </summary>
+        public virtual event Action? OnAuthAccountChanged
+        {
+            add => m_BaseInternalStoreService.OnAuthAccountChanged += value;
+            remove => m_BaseInternalStoreService.OnAuthAccountChanged -= value;
+        }
+    }
+}

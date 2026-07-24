@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Palmmedia.ReportGenerator.Core.Reporting.Builders;
-using TMPro.Examples;
 
 public class stage : MonoBehaviour
 {

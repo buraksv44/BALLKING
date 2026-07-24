@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,13 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07689566, g: 0.02906014, b: 0.19550705, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
-  m_GIWorkflowMode: 1
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -67,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -104,7 +100,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +113,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -149,28 +145,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 101824787}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36706ef3a910fa4428076fba4956d1c1, type: 3}
+  m_Script: {fileID: 11500000, guid: b47c1903c2587d044a52f140fa6b39bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  admob: {fileID: 5186586034244344167, guid: 60d46404fe4ea3940928d50528c24545, type: 3}
-  cam: {fileID: 4510259785517266375, guid: fc3c80663a743a548ba9a2a0aa4d2dd0, type: 3}
-  canvas: {fileID: 2806575549841736529, guid: 0c99934f48b012a488a350c295cc3db2, type: 3}
-  direction: {fileID: 7925413501233202907, guid: 20c924fde825459489cfe3c5fe0bb086, type: 3}
-  evennt: {fileID: 2014493172788500609, guid: 2e508cd2eaab5eb438e0f2b263149958, type: 3}
-  finish: {fileID: 8392209487753044033, guid: 7e60fe7a7ee15274595f4bf2030a3592, type: 3}
-  Ground: {fileID: 7455019007714345680, guid: aff84e32318ba9d448249b65541dbb39, type: 3}
-  ipmanager: {fileID: 7231732332471490605, guid: 993f6d04feb790b4dbce8dee7b3b7bbc, type: 3}
-  intro_hand: {fileID: 7090715203573366263, guid: 6e8b28ccf28163b49b75f0d56338ae08, type: 3}
-  maincam: {fileID: 1634560069471074553, guid: 2d7731ef1209c1c46b15cbc7b4eb61e2, type: 3}
-  player: {fileID: 1462741386336109400, guid: dbf87fb717811be48a9ddbfb51b93f50, type: 3}
-  snow: {fileID: 6518108955715454748, guid: d9fc470f67740674ab23f24032e839dc, type: 3}
-  sound: {fileID: 2115291723454429111, guid: cd537268530df3c438d233475a9ac3b9, type: 3}
-  text: {fileID: 717717314888253260, guid: b273d2b3ff4356040b3aaacea5e58226, type: 3}
+  admob: {fileID: 5186586034244344167, guid: ab6c69380af1abf4ea52fd6b4c36c26f, type: 3}
+  cam: {fileID: 4510259785517266375, guid: 7dbf8aaaec6a1854eb932075507952a8, type: 3}
+  canvas: {fileID: 2806575549841736529, guid: 984ece0254d822843914403364af2af5, type: 3}
+  direction: {fileID: 7925413501233202907, guid: faa75e296915b30408b05a53a9a1d02e, type: 3}
+  evennt: {fileID: 2014493172788500609, guid: f41efa78928a31d4c9a28e64dcbebd8e, type: 3}
+  finish: {fileID: 8392209487753044033, guid: b1af8d0745f525749a0bbc327fc051d3, type: 3}
+  Ground: {fileID: 7455019007714345680, guid: ec258d7b1adbfed4dbe435c5968abab5, type: 3}
+  ipmanager: {fileID: 7231732332471490605, guid: f0671e83abd57d4498cb7605f2794421, type: 3}
+  intro_hand: {fileID: 7090715203573366263, guid: d9a34e178344db64c8b6d30dd2ec6323, type: 3}
+  maincam: {fileID: 1634560069471074553, guid: 274eb1a820768cf4d96b5d11e03dd58a, type: 3}
+  player: {fileID: 1462741386336109400, guid: 048404b7e8a5d0640b68c949fecaa9b7, type: 3}
+  snow: {fileID: 6518108955715454748, guid: 840a72ac95b6c18488581e802fd2abe2, type: 3}
+  sound: {fileID: 2115291723454429111, guid: 2dbc96419c6431b4f919ac806d6616ef, type: 3}
+  text: {fileID: 717717314888253260, guid: a5d80a438ff666549ae3a72cbff24e64, type: 3}
   touch: {fileID: 4696788131451851636, guid: c8bc3c508bea2b449aa81467bb3d866f, type: 3}
-  vectorback: {fileID: 8678044014334104464, guid: f4eae91a7ad49634e80ce4142bb4d351, type: 3}
-  vectorforward: {fileID: 2283703225648753855, guid: a0f980dde5c7d1c42bab8431c5856ce9, type: 3}
-  vector: {fileID: 2439859890406086369, guid: 493c7b1ca3d06df40abfadc5f3db4f6d, type: 3}
-  Skybox: {fileID: 5707505676090872898, guid: def997b1ac6792348bb8cb2cda39c2fe, type: 3}
+  vectorback: {fileID: 8678044014334104464, guid: 8d9d023caa9c3fa40828497095a805a9, type: 3}
+  vectorforward: {fileID: 2283703225648753855, guid: 0fa850f09b948f340bfdd2e94023ee02, type: 3}
+  vector: {fileID: 2439859890406086369, guid: 6300e99f363ca494c87efdc776737002, type: 3}
+  Skybox: {fileID: 5707505676090872898, guid: a39cd71f1b8ff274fae0dace42c0b303, type: 3}
 --- !u!4 &101824789
 Transform:
   m_ObjectHideFlags: 0
@@ -178,11 +174,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101824787}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 101824789}

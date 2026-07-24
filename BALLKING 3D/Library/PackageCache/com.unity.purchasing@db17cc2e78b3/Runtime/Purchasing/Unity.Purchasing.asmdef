@@ -1,0 +1,44 @@
+{
+  "name": "Unity.Purchasing",
+  "rootNamespace": "",
+  "references": [
+    "Unity.Services.Core",
+    "Unity.Services.Core.Environments",
+    "Unity.Services.Core.Internal",
+    "Unity.Purchasing.Security",
+    "Unity.Purchasing.SecurityStub",
+    "Unity.Purchasing.SecurityCore",
+    "Unity.Purchasing.Utilities",
+    "Unity.Purchasing.TransactionVerifier",
+    "Unity.Purchasing.PaymentProviderService",
+    "Unity.Purchasing.LiveContentAdapterService",
+    "Unity.Purchasing.WebshopService",
+    "Unity.Microsoft.GDK",
+    "Unity.Services.Authentication"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [
+    {
+      "name": "com.unity.microsoft.gdk",
+      "expression": "1.4.5",
+      "define": "IAP_GDK"
+    },
+    {
+      "name": "com.unity.modules.uielements",
+      "expression": "1.0.0",
+      "define": "IAP_UIELEMENTS"
+    },
+    {
+      "name": "com.unity.services.authentication",
+      "expression": "3.0.0",
+      "define": "IAP_UNITY_AUTH_ENABLED"
+    }
+  ],
+  "noEngineReferences": false
+}

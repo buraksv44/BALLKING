@@ -1,0 +1,47 @@
+{
+  "name": "com.unity.ads",
+  "displayName": "Advertisement Legacy",
+  "version": "4.19.0",
+  "unity": "2021.3",
+  "description": "NOTE: as of January 31, 2026, the Unity Ads network is completing its transition to in-app bidding and direct integration of the Unity Ads SDK using this package for monetization purposes is no longer supported. To begin or continue monetizing with Unity Ads and receiving access to all Unity Ads performance feature updates, we recommend installing the Ads Mediation package for LevelPlay, Unity's ad mediation platform. For more information, see:\n\nhttps://docs.unity.com/en-us/grow/levelplay/sdk/unity/package-integration\nhttps://docs.unity.com/en-us/grow/levelplay/sdk/unity/migrate-from-unity-ads-to-levelplay",
+  "_upm": {
+    "gameService": {
+      "groupIndex": 4,
+      "groupName": "Monetization",
+      "genericDashboardUrl": "https://unityads.unity3d.com/help/index",
+      "projectDashboardUrl": "https://dashboard.unity3d.com/organizations/{0}/projects/{1}/monetization/about",
+      "projectDashboardUrlType": "OrganizationKeyAndProjectGuid",
+      "configurePath": "Project/Services/Ads"
+    },
+    "supportedPlatforms": [
+      "Android",
+      "iOS"
+    ],
+    "changelog": "### **Android**\n- Upgraded Kotlin to 2.1.x.\n- Fixed bugs and added stability improvements.\n### **iOS**\n- Fixed bugs and added stability improvements."
+  },
+  "keywords": [
+    "ads",
+    "unity"
+  ],
+  "dependencies": {
+    "com.unity.ugui": "1.0.0",
+    "com.unity.modules.androidjni": "1.0.0"
+  },
+  "samples": [
+    {
+      "displayName": "UnityAds Example App",
+      "description": "Contains sample scene and scripts for loading and showing ads with the Unity Ads SDK",
+      "path": "Samples~/UnityAdsExample"
+    }
+  ],
+  "upmCi": {
+    "footprint": "4632d65f4f3f4bb0823e0283a0f5ac6a4d92da05"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.ads@4.19/manual/index.html",
+  "repository": {
+    "url": "https://github.com/Unity-Technologies/unity-ads-sdk.git",
+    "type": "git",
+    "revision": "2150c6382cd1cb85c992d5557261bcdc08f8b496"
+  },
+  "_fingerprint": "dbd68e7e78e9c2d54252c12c9601299756613697"
+}

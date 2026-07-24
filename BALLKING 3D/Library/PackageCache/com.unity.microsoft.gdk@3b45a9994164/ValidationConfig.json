@@ -1,0 +1,9 @@
+{
+    "SuiteConfig":
+    {
+        "TreatErrorsAsWarnings": false,
+        "Targets":
+        [
+        ]
+    }
+}

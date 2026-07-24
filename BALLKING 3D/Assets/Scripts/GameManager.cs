@@ -74,8 +74,8 @@ public class GameManager : MonoBehaviour
             elapsed_time += Time.deltaTime;
         }
 
-        FindObjectOfType<Player>().forwardSpeed = 0;
-        FindObjectOfType<CameraMove>().forwardSpeed = 0;
+        FindAnyObjectByType<Player>().forwardSpeed = 0;
+        FindAnyObjectByType<CameraMove>().forwardSpeed = 0;
     }
 }
    

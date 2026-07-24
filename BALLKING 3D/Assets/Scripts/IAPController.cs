@@ -1,3 +1,4 @@
+#pragma warning disable CS0618
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,6 +39,11 @@ public class IAPController : MonoBehaviour,IStoreListener
     public void OnInitializeFailed(InitializationFailureReason error)
     {
         Debug.Log("Failed initiliaze");
+    }
+
+    public void OnInitializeFailed(InitializationFailureReason error, string message)
+    {
+        Debug.Log("Failed initiliaze: " + message);
     }
 
     public void OnPurchaseFailed(Product product, PurchaseFailureReason failureReason)

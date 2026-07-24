@@ -1,0 +1,9 @@
+{
+    "name": "GdkToolsEditModeTests",
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ]
+}
